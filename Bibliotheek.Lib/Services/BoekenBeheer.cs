@@ -10,5 +10,9 @@ namespace Bibliotheek.Lib.Services
     public class BoekenBeheer
     {
         public List<Boek> Boeken { get; set; }
+        public BoekenBeheer()
+        {
+            Boeken = new List<Boek>();
+        }
     }
 }
