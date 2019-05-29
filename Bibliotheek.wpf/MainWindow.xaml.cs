@@ -80,9 +80,25 @@ namespace Bibliotheek.wpf
             BeheerKnoppen();
         }
 
-        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
+        private void ClearGui()
         {
             GuiFunctions.ClearPanel(grdMain);
+        }
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
+        {
+            ClearGui();
+        }
+
+        private void BtnOpslaan_Click(object sender, RoutedEventArgs e)
+        {
+            huidigBoek = MaakBoekAan();
+            boekenBeheer.Slaop(huidigBoek);
+            lblErrors.Content = boekenBeheer.FoutBoodschap;
+            if (huidigBoek != null)
+            {
+                KoppelVariabeleLijsten();
+                ClearGui();
+            }
         }
     }
 }
