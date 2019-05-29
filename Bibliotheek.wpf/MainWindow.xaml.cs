@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Boeken.Entities;
+using Boeken.Services;
 
 namespace Bibliotheek.wpf
 {
@@ -23,6 +25,11 @@ namespace Bibliotheek.wpf
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
         }
     }
 }
