@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Boeken.cs" />
+    <Compile Include="Entities\Boek.cs" />
     <Compile Include="Entities\Categorieen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BoekenBeheer.cs" />

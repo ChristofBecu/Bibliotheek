@@ -23,7 +23,7 @@ namespace Bibliotheek.wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        Boeken huidigBoek;
+        Boek huidigBoek;
         BoekenBeheer boekenBeheer;
         public MainWindow()
         {

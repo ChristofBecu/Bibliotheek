@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibliotheek.Lib.Entities
 {
-    public class Boeken
+    public class Boek
     {
         public string ISBN { get; set; }
         public string Titel { get; set; }
@@ -14,7 +14,7 @@ namespace Bibliotheek.Lib.Entities
         public decimal Prijs { get; set; }
         public Categorieen Categorie { get; set; }
 
-        public Boeken(string isbn, string titel, string auteur, decimal prijs, Categorieen categorie)
+        public Boek(string isbn, string titel, string auteur, decimal prijs, Categorieen categorie)
         {
             ISBN = isbn;
             Titel = titel;
