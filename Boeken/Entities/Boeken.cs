@@ -8,5 +8,19 @@ namespace Boeken.Entities
 {
     public class Boeken
     {
+        public string ISBN { get; set; }
+        public string Titel { get; set; }
+        public string Auteur { get; set; }
+        public decimal Prijs { get; set; }
+        public Enum Categorie { get; set; }
+
+        public Boeken(string isbn, string titel, string auteur, decimal prijs, Enum categorie)
+        {
+            ISBN = isbn;
+            Titel = titel;
+            Auteur = auteur;
+            Prijs = prijs;
+            Categorie = categorie;
+        }
     }
 }
