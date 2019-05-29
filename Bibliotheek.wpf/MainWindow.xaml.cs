@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Bibliotheek.Lib.Entities;
 using Bibliotheek.Lib.Services;
+using Utilities.Lib;
 
 
 namespace Bibliotheek.wpf
@@ -79,6 +80,9 @@ namespace Bibliotheek.wpf
             BeheerKnoppen();
         }
 
-   
+        private void BtnNieuw_Click(object sender, RoutedEventArgs e)
+        {
+            GuiFunctions.ClearPanel(grdMain);
+        }
     }
 }
