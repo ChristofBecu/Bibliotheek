@@ -46,5 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BoekenBeheer.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\OneDrive\Desktop\Utilities\Utilities.Lib\Utilities.Lib.csproj">
+      <Project>{6def1c95-2343-429e-9aa2-7c0063baeb65}</Project>
+      <Name>Utilities.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

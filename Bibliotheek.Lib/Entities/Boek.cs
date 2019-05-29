@@ -8,6 +8,7 @@ namespace Bibliotheek.Lib.Entities
 {
     public class Boek
     {
+
         public string ISBN { get; set; }
         public string Titel { get; set; }
         public string Auteur { get; set; }

@@ -29,12 +29,19 @@ namespace Bibliotheek.wpf
         public MainWindow()
         {
             InitializeComponent();
+            boekenBeheer = new BoekenBeheer();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
+            KoppelCategorieLijst();
+            KoppelVariabeleLijsten();
             BeheerKnoppen();
+        }
+
+        private void KoppelCategorieLijst()
+        {
+            cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
         }
 
         private Boek MaakBoekAan()
@@ -48,12 +55,11 @@ namespace Bibliotheek.wpf
                 decimal prijs = decimal.Parse(txtPrijs.Text);
                 Categorieen categorie = (Categorieen)cmbCategorie.SelectedItem;
                 nieuwBoek = new Boek(isbn, titel, auteur, prijs, categorie);
-                if (huidigBoek != null)
-                    nieuwBoek.ISBN = huidigBoek.ISBN;
+                //if (huidigBoek != null)
+                //    nieuwBoek.ISBN = huidigBoek.ISBN;
             }
             catch (Exception)
             {
-
                 Console.WriteLine("Aanmaak van instance niet gelukt\n");
             }
             return nieuwBoek;
@@ -63,6 +69,15 @@ namespace Bibliotheek.wpf
         {
             lstBoeken.ItemsSource = boekenBeheer.Boeken;
             lstBoeken.Items.Refresh();
+        }
+
+        private void ToonDetails(Boek huidigBoek)
+        {
+            txtIsbn.Text = huidigBoek.ISBN;
+            txtTitel.Text = huidigBoek.Titel;
+            txtAuteur.Text = huidigBoek.Auteur;
+            txtPrijs.Text = huidigBoek.Prijs.ToString();
+            cmbCategorie.SelectedItem = (Categorieen)huidigBoek.Categorie;
         }
 
         private void BeheerKnoppen()
@@ -92,12 +107,28 @@ namespace Bibliotheek.wpf
         private void BtnOpslaan_Click(object sender, RoutedEventArgs e)
         {
             huidigBoek = MaakBoekAan();
-            boekenBeheer.Slaop(huidigBoek);
+            boekenBeheer.SlaOp(huidigBoek);
             lblErrors.Content = boekenBeheer.FoutBoodschap;
             if (huidigBoek != null)
             {
                 KoppelVariabeleLijsten();
                 ClearGui();
+            }
+        }
+
+        private void BtnVerwijderen_Click(object sender, RoutedEventArgs e)
+        {
+            boekenBeheer.Verwijder(huidigBoek);
+            ClearGui();
+            KoppelVariabeleLijsten();
+        }
+
+        private void LstBoeken_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(lstBoeken.SelectedItem != null)
+            {
+                huidigBoek = (Boek)lstBoeken.SelectedItem;
+                ToonDetails(huidigBoek);
             }
         }
     }

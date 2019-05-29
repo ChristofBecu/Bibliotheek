@@ -20,11 +20,11 @@
             <Label Content="Prijs" HorizontalAlignment="Left" Margin="0,105,0,0" VerticalAlignment="Top" Width="63"/>
         </Grid>
         <Grid x:Name="grdButtons" HorizontalAlignment="Left" Height="79" Margin="116,152,0,0" VerticalAlignment="Top" Width="77">
-            <Button x:Name="btnVerwijderen" Content="Verwijderen" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btnVerwijderen" Content="Verwijderen" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Width="75" Click="BtnVerwijderen_Click"/>
             <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BtnOpslaan_Click"/>
             <Button x:Name="btnNieuw" Content="Nieuw" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="75" Click="BtnNieuw_Click"/>
         </Grid>
-        <ListBox x:Name="lstBoeken" HorizontalAlignment="Left" Height="216" Margin="212,0,0,0" VerticalAlignment="Top" Width="164"/>
+        <ListBox x:Name="lstBoeken" HorizontalAlignment="Left" Height="216" Margin="212,0,0,0" VerticalAlignment="Top" Width="164" SelectionChanged="LstBoeken_SelectionChanged"/>
         <Label x:Name="lblErrors" Content="" HorizontalAlignment="Left" Height="79" Margin="10,152,0,0" VerticalAlignment="Top" Width="101" Foreground="Red"/>
 
     </Grid>
