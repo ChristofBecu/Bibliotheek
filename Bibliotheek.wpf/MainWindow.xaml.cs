@@ -33,7 +33,7 @@ namespace Bibliotheek.wpf
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
-            KoppelVariabeleLijsten();
+            BeheerKnoppen();
         }
 
         private Boek MaakBoekAan()
@@ -63,5 +63,22 @@ namespace Bibliotheek.wpf
             lstBoeken.ItemsSource = boekenBeheer.Boeken;
             lstBoeken.Items.Refresh();
         }
+
+        private void BeheerKnoppen()
+        {
+            btnOpslaan.IsEnabled = false;
+            btnVerwijderen.IsEnabled = false;
+            if (huidigBoek != null)
+                btnVerwijderen.IsEnabled = true;
+            if (MaakBoekAan() != null)
+                btnOpslaan.IsEnabled = true;
+        }
+
+        private void InputChanged(object sender, RoutedEventArgs e)
+        {
+            BeheerKnoppen();
+        }
+
+   
     }
 }

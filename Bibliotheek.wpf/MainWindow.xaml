@@ -12,11 +12,11 @@
             <Label Content="ISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="63"/>
             <Label Content="Auteur" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Width="63"/>
             <Label Content="Categorie" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Width="63"/>
-            <TextBox x:Name="txtIsbn" HorizontalAlignment="Left" Height="23" Margin="63,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtTitel" HorizontalAlignment="Left" Height="23" Margin="63,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtAuteur" HorizontalAlignment="Left" Height="23" Margin="63,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <ComboBox x:Name="cmbCategorie" HorizontalAlignment="Left" Margin="63,83,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtPrijs" HorizontalAlignment="Left" Height="23" Margin="63,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtIsbn" HorizontalAlignment="Left" Height="23" Margin="63,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="InputChanged"/>
+            <TextBox x:Name="txtTitel" HorizontalAlignment="Left" Height="23" Margin="63,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="InputChanged"/>
+            <TextBox x:Name="txtAuteur" HorizontalAlignment="Left" Height="23" Margin="63,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="InputChanged"/>
+            <ComboBox x:Name="cmbCategorie" HorizontalAlignment="Left" Margin="63,83,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="InputChanged"/>
+            <TextBox x:Name="txtPrijs" HorizontalAlignment="Left" Height="23" Margin="63,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="InputChanged"/>
             <Label Content="Prijs" HorizontalAlignment="Left" Margin="0,105,0,0" VerticalAlignment="Top" Width="63"/>
         </Grid>
         <Grid x:Name="grdButtons" HorizontalAlignment="Left" Height="79" Margin="116,152,0,0" VerticalAlignment="Top" Width="77">
