@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliotheek.wpf", "Biblioth
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities.Lib", "..\..\..\OneDrive\Desktop\Utilities\Utilities.Lib\Utilities.Lib.csproj", "{6DEF1C95-2343-429E-9AA2-7C0063BAEB65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boeken.Lib", "Boeken\Boeken.Lib.csproj", "{19F02A8A-2A80-4F3F-96C1-EC2CD2D2D9BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6DEF1C95-2343-429E-9AA2-7C0063BAEB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DEF1C95-2343-429E-9AA2-7C0063BAEB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DEF1C95-2343-429E-9AA2-7C0063BAEB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F02A8A-2A80-4F3F-96C1-EC2CD2D2D9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F02A8A-2A80-4F3F-96C1-EC2CD2D2D9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F02A8A-2A80-4F3F-96C1-EC2CD2D2D9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F02A8A-2A80-4F3F-96C1-EC2CD2D2D9BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
