@@ -12,9 +12,9 @@ namespace Boeken.Entities
         public string Titel { get; set; }
         public string Auteur { get; set; }
         public decimal Prijs { get; set; }
-        public Enum Categorie { get; set; }
+        public Categorieen Categorie { get; set; }
 
-        public Boeken(string isbn, string titel, string auteur, decimal prijs, Enum categorie)
+        public Boeken(string isbn, string titel, string auteur, decimal prijs, Categorieen categorie)
         {
             ISBN = isbn;
             Titel = titel;
