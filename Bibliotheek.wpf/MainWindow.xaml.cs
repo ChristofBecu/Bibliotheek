@@ -34,5 +34,27 @@ namespace Bibliotheek.wpf
         {
             cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
         }
+
+        private Boek MaakBoekAan()
+        {
+            Boek nieuwBoek = null;
+            try
+            {
+                string isbn = txtIsbn.Text;
+                string titel = txtTitel.Text;
+                string auteur = txtAuteur.Text;
+                decimal prijs = decimal.Parse(txtPrijs.Text);
+                Categorieen categorie = (Categorieen)cmbCategorie.SelectedItem;
+                nieuwBoek = new Boek(isbn, titel, auteur, prijs, categorie);
+                if (huidigBoek != null)
+                    nieuwBoek.ISBN = huidigBoek.ISBN;
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Aanmaak van instance niet gelukt\n");
+            }
+            return nieuwBoek;
+        }
     }
 }

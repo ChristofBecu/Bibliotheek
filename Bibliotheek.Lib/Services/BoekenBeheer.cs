@@ -14,5 +14,21 @@ namespace Bibliotheek.Lib.Services
         {
             Boeken = new List<Boek>();
         }
+
+        public bool VoegBoekToe(Boek huidigeBoek)
+        {
+            bool gelukt = false;
+            if (huidigeBoek != null)
+            {
+                Boeken.Add(huidigeBoek);
+                //FoutBoodschap = null;
+                gelukt = true;
+            }
+            else
+            {
+                //FoutBoodschap = FOUTBOODSCHAP;
+            }
+            return gelukt;
+        }
     }
 }
