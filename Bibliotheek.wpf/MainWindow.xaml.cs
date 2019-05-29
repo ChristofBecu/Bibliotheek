@@ -33,6 +33,7 @@ namespace Bibliotheek.wpf
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             cmbCategorie.ItemsSource = Enum.GetValues(typeof(Categorieen));
+            KoppelVariabeleLijsten();
         }
 
         private Boek MaakBoekAan()
@@ -55,6 +56,12 @@ namespace Bibliotheek.wpf
                 Console.WriteLine("Aanmaak van instance niet gelukt\n");
             }
             return nieuwBoek;
+        }
+
+        private void KoppelVariabeleLijsten()
+        {
+            lstBoeken.ItemsSource = boekenBeheer.Boeken;
+            lstBoeken.Items.Refresh();
         }
     }
 }
