@@ -22,5 +22,10 @@ namespace Bibliotheek.Lib.Entities
             Prijs = prijs;
             Categorie = categorie;
         }
+
+        public override string ToString()
+        {
+            return $"{Titel} - {Prijs}";
+        }
     }
 }
