@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boeken.Lib.Entities
+namespace Bibliotheek.Lib.Entities
 {
     public class Boeken
     {

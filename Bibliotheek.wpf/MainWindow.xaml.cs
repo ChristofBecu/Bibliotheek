@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Boeken.Entities;
-using Boeken.Services;
+using Bibliotheek.Lib.Entities;
+using Bibliotheek.Lib.Services;
+
 
 namespace Bibliotheek.wpf
 {
@@ -22,6 +23,8 @@ namespace Bibliotheek.wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        Boeken huidigBoek;
+        BoekenBeheer boekenBeheer;
         public MainWindow()
         {
             InitializeComponent();

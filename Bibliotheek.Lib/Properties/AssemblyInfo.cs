@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Boeken.Lib")]
+[assembly: AssemblyTitle("Bibliotheek.Lib")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("Boeken")]
+[assembly: AssemblyProduct("Bibliotheek.Lib")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("19f02a8a-2a80-4f3f-96c1-ec2cd2d2d9be")]
+[assembly: Guid("12aee7f0-5f05-420b-940a-93899e34c385")]
 
 // Version information for an assembly consists of the following four values:
 //

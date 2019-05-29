@@ -99,9 +99,9 @@
       <Project>{6def1c95-2343-429e-9aa2-7c0063baeb65}</Project>
       <Name>Utilities.Lib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Boeken\Boeken.Lib.csproj">
-      <Project>{19f02a8a-2a80-4f3f-96c1-ec2cd2d2d9be}</Project>
-      <Name>Boeken.Lib</Name>
+    <ProjectReference Include="..\Bibliotheek.Lib\Bibliotheek.Lib.csproj">
+      <Project>{12aee7f0-5f05-420b-940a-93899e34c385}</Project>
+      <Name>Bibliotheek.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
